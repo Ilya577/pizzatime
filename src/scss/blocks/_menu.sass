@@ -1,0 +1,84 @@
+.menu
+ &-products
+  display: flex
+  flex-wrap: wrap
+ &-center
+  display: flex
+  flex-direction: column 
+  align-items: center     
+ &__title
+  color: #ffa650
+  margin-bottom: 40px
+ &__correction
+  display: flex
+  flex-direction: row
+  margin-bottom: 95px
+ &__item
+  padding: 18px 59px 
+  color: #e6e6e6
+  font-family: $mon
+  font-size: 18px
+  font-weight: 700
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05)
+  cursor: pointer
+  &_active
+   background-color: #1f1f1f   
+ &__product
+  margin-bottom: 90px  
+ &-product 
+  padding: 0 44px 
+  height: 550px
+  width: 33%
+  min-width: 400px
+  border-right: 3px solid #dddddd
+  &:nth-of-type(3n)
+   border: none
+  &__img
+   margin-bottom: 28px   
+  &__title
+   color: #1f1f1f
+   font-family: $mon
+   font-size: 22px
+   font-weight: 700
+   margin-bottom: 12px   
+  &__disc
+   color: #9f9f9f
+   font-family: $rob
+   font-size: 16px
+   font-weight: 300  
+   margin-bottom: 50px
+  &__buttons
+   display: flex
+   margin-bottom: 40px
+  &__btn
+   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05)    
+   padding: 16px 35px 
+   color: #a2a2a2
+   font-family: $mon
+   font-size: 16px
+   font-weight: 400 
+   cursor: pointer 
+   &_active  
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+    border-radius: 21px !important
+    background-color: #ffffff  
+  &__order
+   display: flex
+   flex-direction: row
+   justify-content: space-between
+   align-items: center
+  &-order__button
+   background-color: #ffa650  
+   display: inline-block
+   cursor: pointer
+  &__price
+   display: inline-block  
+   color: #1f1f1f
+   font-family: $mon
+   font-size: 22px
+   font-weight: 700         
+.radius
+ &-left           
+  border-radius: 23px 0 0 23px
+ &-right
+  border-radius: 0 23px 23px 0
