@@ -1,25 +1,40 @@
 .about
  display: flex
+ +for-size(min900)
+  width: 100%
  &__main
-  width: 957px
+  width: 100%
   height: 438px
   background-color: #1f1f1f
   z-index: -1
+  +for-size(min900)
+   width: 50%
+  +for-size(min600)
+   height: 300px
+  +for-size(min320)
+   width: 100%
+   text-align: center
+ &__img
+  width: 100%
+  +for-size(min320)
+   display: none
+  & img
+   width: 100%
+   height: 100%
  &-main
-  position: relative
+  padding: 60px
+  +for-size(min600)
+   padding: 15px
+  +for-size(min320)
+   padding: 30px
  &__title
-  position: absolute
-  top: 110px 
-  left: 90px
   color: #ffffff
   font-family: $mon
   font-size: 48px
   font-weight: 700
   line-height: 1   
+  margin-bottom: 30px
  &__disc
-  position: absolute
-  top: 205px
-  left: 90px
   color: #ffffff
   font-family: $rob
   font-size: 18px

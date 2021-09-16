@@ -8,16 +8,29 @@
  position: fixed
  justify-content: center
  align-items: center
+ z-index: 9999!important
  &__close
   position: absolute
   right: 34px
   top: 34px
-  cursor: pointer     
+  cursor: pointer 
+  +for-size(min320)
+   right: 14px
+   top: 14px  
+  & img  
+   +for-size(min320)
+    width: 20px 
+    height: 20px 
  &-menu
-  width: 730px
-  height: 570px  
-  top: calc( 50% - 285px )   
-  left: calc( 50% - 365px )        
+  width: 500px
+  height: 400px
+  top: calc( 50% - 200px )   
+  left: calc( 50% - 250px ) 
+  +for-size(min320)
+   width: 320px     
+   height: auto
+   left: calc( 50% - 160px )  
+   padding: 25px 0 
   &-style
    color: #1f1f1f
    font-family: $mon
@@ -26,12 +39,20 @@
    cursor: pointer
   &__pizza
    margin-bottom: 50px
+   +for-size(min320)
+    margin-bottom: 20px
   &__about
    margin-bottom: 50px
+   +for-size(min320)
+    margin-bottom: 20px
   &__contacts
    margin-bottom: 50px
+   +for-size(min320)
+    margin-bottom: 20px
   &__tel
    margin-bottom: 50px
+   +for-size(min320) 
+    margin-bottom: 20px
   &__number
    color: #ffa650
    font-family: $mon
@@ -47,25 +68,35 @@
  background-color: #ffa650      
 .popup
  &-order
-  width: 730px
-  height: 900px 
-  top: calc( 50% - 450px )   
-  left: calc( 50% - 365px ) 
+  padding: 24px 0
+  width: 500px
+  height: auto 
+  top: 6px   
+  left: calc( 50% - 250px ) 
   z-index: 5
+  +for-size(min320)
+   width: 320px
+   left: calc( 50% - 160px ) 
+  &__img
+   +for-size(min600)
+    display: none
+  & .button
+   height: auto
+   padding: 10px 74px
   &__title
    color: #1f1f1f
    font-family: $mon
-   margin-bottom: 30px
-   font-size: 48px
+   margin-bottom: 12px
+   font-size: 24px
    font-weight: 700 
   &__text
    color: #1f1f1f
    font-family: $rob
-   margin-bottom: 50px
-   font-size: 24px
+   margin-bottom: 10px
+   font-size: 18px
    font-weight: 300  
   &__img
-   margin-bottom: 18px              
+   margin-bottom: 10px              
   &__item
    display: flex
    flex-direction: row 
@@ -73,7 +104,7 @@
    font-family: $mon
    font-size: 22px
    font-weight: 700
-   margin-bottom: 20px
+   margin-bottom: 10px
   &__name
    margin-right: 10px 
   &__size   
@@ -81,10 +112,10 @@
    font-family: $mon
    font-size: 16px
    font-weight: 400
-   margin-bottom: 35px
+   margin-bottom: 15px
 .input
  width: 300px
- height: 64px
+ height: 30px
  border-radius: 32px
  background-color: #f7f7f7 
  color: #a2a2a2

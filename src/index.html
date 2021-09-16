@@ -12,14 +12,13 @@
 <body>
 <header class="header">
     <div class="header-top">
-        <div class="header-container">
+        <div class="container">
             <div class="header-top-panel">
         <a href="#" class="logo"><img src="img/logo.png" alt="Pizza"></a>
         <nav class="nav">
-            <a href="#" class="nav__items">
-                <a href="#" id = "scroll-pizza" class="nav__link">Пицца</a>
-                <a href="#" class="nav__link">О нас</a>
-                <a href="#" class="nav__link">Контакты</a>
+                <a href="#pizzaaa" class="nav__link">Пицца</a>
+                <a href="#about" class="nav__link">О нас</a>
+                <a href="#contacts" class="nav__link">Контакты</a>
             </a>
             <a class = "nav__tel" href="tel:+79999999999">+7 (999) 999-99-99</a>
              </nav>
@@ -41,9 +40,9 @@
 </section>
 <div class="popup popup-menu none">
     <div class="popup__close popup-menu__close"><img src="img/3-layers.png" alt="close"></div>
-    <div class="popup-menu__pizza popup-menu-style">Пицца</div>
-    <div class="popup-menu__about popup-menu-style">О нас</div>
-    <div class="popup-menu__contacts popup-menu-style">Контакты</div>  
+    <a href="#pizzaaa" class="popup-menu__pizza popup-menu-style">Пицца</a>
+    <a href="#about" class="popup-menu__about popup-menu-style">О нас</a>
+    <a href="#contacts" class="popup-menu__contacts popup-menu-style">Контакты</a>  
     <div class="popup-menu__tel">
     <a class="popup-menu__number" href="tel:+79999999999">+7 (999) 999-99-99</a>
     </div>
@@ -98,7 +97,7 @@
         </div>
     <div class="container">
         <div class="menu-center">
-     <div class="title menu__title">
+     <div id="pizzaaa" class="title menu__title">
         Меню
      </div>
      <div class="menu__correction">
@@ -425,7 +424,7 @@
 </div>
 </main>
 <section class="section">
-    <div class="about">
+    <div id="about" class="about">
         <div class="about__img"><img src="img/bg.jpg.png" alt="j"></div> 
         <section class="about-main about__main">
             <h2 class="about__title">
@@ -437,7 +436,7 @@
     </div>
 </section>
 
-<section class="section contacts">
+<section id="contacts" class="section contacts">
       <h2 class="title contacts__title">
         Контакты
       </h2>
@@ -472,9 +471,6 @@
             </a>
            </p>
           </section>
-          <div class="contacts__img">
-              <img src="img/photo-1536250748881-25d8cc4a285e1.png" alt="">
-          </div>
       </div>
 </section>
 

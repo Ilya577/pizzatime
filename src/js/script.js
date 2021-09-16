@@ -22,8 +22,6 @@ $('.popup-order__close').on('click', function() {
 })    
 
 
-
-
 var removeChildren = function(item){
   while(item.firstChild){
       item.removeChild(item.firstChild)

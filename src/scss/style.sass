@@ -1,10 +1,55 @@
 @import 'fonts'
+
+
+
+=for-size($size) 
+  @if $size == min320
+    @media (max-width: 599px) 
+      @content
+  @else if $size == min600
+    @media (max-width: 899px) 
+      @content 
+  @else if $size == min900 
+    @media (max-width: 1199px) 
+      @content
+  @else if $size == min1200 
+    @media (max-width: 1799px) 
+      @content
+  @else if $size == min1800 
+    @media (min-width: 1800px) 
+      @content 
+
+$containerWidth: 1200px
+
+.container
+ width: $containerWidth
+ margin: 0 auto  
+ padding: 0 10px
+
++for-size(min1200) 
+  $containerWidth: 1200px
+  .container
+    width: $containerWidth
++for-size(min900) 
+  $containerWidth: 900px
+  .container
+    width: $containerWidth
++for-size(min600) 
+  $containerWidth: 600px
+  .container
+    width: $containerWidth
++for-size(min320) 
+  $containerWidth: 320px
+  .container
+    width: $containerWidth
+
 @import 'blocks/header'
 @import 'blocks/best'
 @import 'blocks/menu'
 @import 'blocks/about'
 @import 'blocks/contacts'
 @import 'blocks/popup'
+
 *
  box-sizing: border-box
  margin: 0
@@ -17,17 +62,26 @@
  border-radius: 24px
  color: #fff
  font-family: $mon
+ +for-size(min900)
+  padding: 12px 50px
+ +for-size(min320)
+  padding: 9px 30px
+ +for-size(min600)
+  padding: 11px 35px
 .section
- margin-bottom: 120px 
+ margin-bottom: 80px
+ +for-size(min320)
+  margin-bottom: 35px 
 .main 
  margin-bottom: 25px  
+ +for-size(min320)
+  margin-bottom: 0
 .title
  font-family: $mon
  font-size: 48px
- font-weight: 700   
-.container
- width: 1240px
- margin: 0 auto   
+ font-weight: 700 
+ +for-size(min320)
+  font-size: 30px  
 .row
  display: flex
  flex-direction: row    
@@ -36,13 +90,17 @@
  font-family: $mon
  font-size: 18px
  font-weight: 700  
+ +for-size(min600)
+  font-size: 14px
 .disc-main
  color: #1f1f1f
  font-family: $rob
  font-size: 18px
  font-weight: 300 
+ +for-size(min600)
+  font-size: 14px
 .footer
- width: 1920px
+ width: 100%
  height: 84px
  background-color: #1f1f1f   
  display: flex

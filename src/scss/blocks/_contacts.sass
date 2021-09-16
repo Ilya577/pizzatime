@@ -7,14 +7,22 @@
  &-address
   display: flex
   flex-direction: row
-  height: 555px
+  height: 500px
   align-items: flex-end
+  width: 100%
+  justify-content: center
+  +for-size(min600)
+   flex-wrap: wrap
+   height: auto
  &__map
-  margin-right: 28px              
+  margin-right: 28px 
+  +for-size(min600)
+   display: none       
  &__disc
-  transform: translateY(-20%)
- &__img
-  transform: translate(-5%,30%)
+  width: 250px
+  +for-size(min600)
+   width: 300px
+   text-align: center
 .disc
  &__item
   margin-right: 5px   
@@ -23,4 +31,6 @@
   font-family: Roboto
   font-size: 18px
   font-weight: 300
-  text-decoration: none         
+  text-decoration: none    
+  +for-size(min600)
+   font-size: 14px     
